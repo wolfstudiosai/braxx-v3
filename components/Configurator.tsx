@@ -204,7 +204,7 @@ export const Configurator: React.FC<ConfiguratorProps> = ({
               <ArrowLeft size={14} /> BACK TO SPECS
             </button>
 
-            <div className="bg-white/40 p-6 rounded-[2rem] border border-white/50 space-y-4">
+            <div className="bg-white/40 p-6 rounded-4xl border border-white/50 space-y-4">
               <div className="flex justify-between items-center">
                 <span className="text-[10px] font-black text-black tracking-widest uppercase">SELECT DATE</span>
                 <CalendarIcon size={14} className="text-black/40" />
@@ -230,7 +230,7 @@ export const Configurator: React.FC<ConfiguratorProps> = ({
               </div>
             </div>
 
-            <div className="bg-white/40 p-5 rounded-[2rem] border border-white/50">
+            <div className="bg-white/40 p-5 rounded-4xl border border-white/50">
               <h4 className="text-[9px] font-black text-black tracking-widest uppercase mb-1">LOCATION</h4>
               <p className="text-[10px] font-bold text-gray-500 uppercase leading-relaxed">
                 BRAXX STRATEGIC OUTPOST<br />LOS ANGELES, CA
@@ -261,8 +261,8 @@ export const Configurator: React.FC<ConfiguratorProps> = ({
               BOOK TEST RIDE <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </div>
             {/* Stripe pattern overlay */}
-            <div className="absolute top-0 right-0 w-1/4 h-full bg-white/5 skew-x-[25deg] translate-x-4 pointer-events-none border-l border-white/10" />
-            <div className="absolute top-0 right-2 w-1/4 h-full bg-white/5 skew-x-[25deg] translate-x-8 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-1/4 h-full bg-white/5 skew-x-25 translate-x-4 pointer-events-none border-l border-white/10" />
+            <div className="absolute top-0 right-2 w-1/4 h-full bg-white/5 skew-x-25 translate-x-8 pointer-events-none" />
           </button>
         ) : (
           <button

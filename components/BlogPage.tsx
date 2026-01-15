@@ -39,7 +39,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ setView }) => {
             alt="Featured Post"
             className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent"></div>
 
           <div className="absolute bottom-12 left-12 right-12 flex flex-col md:flex-row items-end justify-between gap-8">
             <div className="space-y-4 max-w-2xl">

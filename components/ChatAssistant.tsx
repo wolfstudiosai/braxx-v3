@@ -47,7 +47,7 @@ export const ChatAssistant: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 flex flex-col items-end gap-4 z-[100]">
+    <div className="fixed bottom-8 right-8 flex flex-col items-end gap-4 z-100">
       {/* Mini Notification */}
       {isVisible && !isOpen && (
         <div className="bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-4 relative animate-in fade-in slide-in-from-bottom-4 duration-500 max-w-[280px]">
@@ -90,8 +90,8 @@ export const ChatAssistant: React.FC = () => {
             {messages.map((msg) => (
               <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[80%] p-4 rounded-3xl text-xs font-medium leading-relaxed ${msg.role === 'user'
-                    ? 'bg-black text-white rounded-tr-none'
-                    : 'bg-white border border-black/5 text-gray-800 rounded-tl-none shadow-sm'
+                  ? 'bg-black text-white rounded-tr-none'
+                  : 'bg-white border border-black/5 text-gray-800 rounded-tl-none shadow-sm'
                   }`}>
                   {msg.text}
                 </div>
@@ -134,7 +134,7 @@ export const ChatAssistant: React.FC = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-black hover:bg-black/90 text-white p-5 rounded-[2rem] shadow-2xl transition-all hover:scale-110 active:scale-95 group relative overflow-hidden"
+          className="bg-black hover:bg-black/90 text-white p-5 rounded-4xl shadow-2xl transition-all hover:scale-110 active:scale-95 group relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-[#e2ff4a]/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
           <MessageSquare size={24} className="relative z-10" fill="currentColor" />

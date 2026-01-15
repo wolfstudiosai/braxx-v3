@@ -7,7 +7,6 @@ import { Send, Twitter, Instagram, Facebook, Linkedin, Loader2 } from 'lucide-re
 import { ViewState } from '../types';
 import { CreateNewsLetter } from '@/lib/api';
 import { toast } from 'react-toastify';
-import { useForm } from 'react-hook-form';
 
 interface FooterProps {
   setView?: (view: ViewState) => void;
