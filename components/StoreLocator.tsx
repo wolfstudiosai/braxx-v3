@@ -112,7 +112,7 @@ export const StoreLocator: React.FC = () => {
           <StoreMap locations={STORE_LOCATIONS} />
 
           {/* Map legend */}
-          <div className="absolute bottom-4 left-4 z-[1000] bg-black/80 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center gap-2">
+          <div className="absolute bottom-4 left-4 z-1000 bg-black/80 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-[#e2ff4a]"></div>
             <span className="text-[10px] font-black text-white/60 uppercase tracking-widest">BRAXX Service Centers</span>
           </div>

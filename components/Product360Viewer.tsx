@@ -60,7 +60,7 @@ export const Product360Viewer: React.FC<Product360ViewerProps> = ({ images, clas
     const deltaX = clientX - startXRef.current;
     const indexDelta = Math.round(deltaX / sensitivity);
 
-    let newIndex = (currentIndexRef.current - indexDelta) % totalImages;
+    let newIndex = (currentIndexRef.current + indexDelta) % totalImages;
     if (newIndex < 0) newIndex += totalImages;
 
     setCurrentIndex(newIndex);
