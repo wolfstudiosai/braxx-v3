@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { BlogSection } from '../../components/BlogSection';
+import { BlogSection } from '@/components/BlogSection';
 import { ArrowRight, Clock } from 'lucide-react';
 
 export default function BlogPage() {

@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState, useMemo } from 'react';
 import { ViewState } from '../types';
@@ -102,7 +103,7 @@ interface BlogSectionProps {
 // Fixed: Explicitly typed props and removed React.FC to resolve inference issues in App.tsx
 export const BlogSection = ({ setView }: BlogSectionProps) => {
   const [activeFilter, setActiveFilter] = useState('ALL');
-  
+
   const categories = useMemo(() => {
     const cats = Array.from(new Set(BLOG_POSTS.map(p => p.category.toUpperCase())));
     return ['ALL', ...cats];
@@ -119,17 +120,16 @@ export const BlogSection = ({ setView }: BlogSectionProps) => {
         <div className="flex flex-wrap items-center justify-between pb-8 border-b border-black/10 gap-y-6">
           <div className="flex items-center gap-12">
             <span className="text-sm font-black text-black uppercase tracking-[0.2em] italic">LATEST NEWS</span>
-            
+
             <div className="hidden sm:flex flex-wrap gap-1">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveFilter(cat)}
-                  className={`px-4 py-1.5 rounded-full text-[8px] font-black tracking-widest uppercase transition-all ${
-                    activeFilter === cat 
-                    ? 'bg-black text-white' 
-                    : 'bg-transparent text-black/40 hover:text-black'
-                  }`}
+                  className={`px-4 py-1.5 rounded-full text-[8px] font-black tracking-widest uppercase transition-all ${activeFilter === cat
+                      ? 'bg-black text-white'
+                      : 'bg-transparent text-black/40 hover:text-black'
+                    }`}
                 >
                   {cat}
                 </button>
@@ -138,7 +138,7 @@ export const BlogSection = ({ setView }: BlogSectionProps) => {
           </div>
 
           {setView && (
-            <button 
+            <button
               onClick={() => setView(ViewState.BLOG)}
               className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest hover:gap-4 transition-all"
             >
@@ -150,11 +150,11 @@ export const BlogSection = ({ setView }: BlogSectionProps) => {
 
       <div className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory px-8 lg:px-24 gap-6 pb-12 cursor-grab active:cursor-grabbing scroll-smooth">
         {filteredPosts.map((post) => (
-          <div 
+          <div
             key={post.id}
             className="group relative flex-shrink-0 w-[85vw] md:w-[45vw] lg:w-[22vw] h-[500px] snap-start rounded-[3rem] overflow-hidden border border-black/5 bg-white transition-all duration-700 hover:shadow-2xl"
           >
-            <div 
+            <div
               className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
               style={{ backgroundImage: `url(${post.image})` }}
             >
@@ -176,11 +176,11 @@ export const BlogSection = ({ setView }: BlogSectionProps) => {
                 {post.excerpt}
               </p>
             </div>
-            
+
             <div className="absolute bottom-0 left-0 w-full h-1.5 bg-black/5 group-hover:bg-[#e2ff4a] transition-all duration-700"></div>
           </div>
         ))}
-        
+
         <div className="flex-shrink-0 w-24"></div>
       </div>
     </section>

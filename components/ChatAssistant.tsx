@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, X, Send, Loader2, Zap } from 'lucide-react';
 import { sendMessageToGemini } from '../services/geminiService';
@@ -32,7 +34,7 @@ export const ChatAssistant: React.FC = () => {
     setIsLoading(true);
 
     const responseText = await sendMessageToGemini(messages, input);
-    
+
     const modelMsg: ChatMessage = {
       id: (Date.now() + 1).toString(),
       role: 'model',
@@ -49,7 +51,7 @@ export const ChatAssistant: React.FC = () => {
       {/* Mini Notification */}
       {isVisible && !isOpen && (
         <div className="bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-4 relative animate-in fade-in slide-in-from-bottom-4 duration-500 max-w-[280px]">
-          <button 
+          <button
             onClick={(e) => { e.stopPropagation(); setIsVisible(false); }}
             className="absolute top-2 right-2 text-gray-300 hover:text-gray-600 transition-colors"
           >
@@ -87,11 +89,10 @@ export const ChatAssistant: React.FC = () => {
           <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-[#f8f8f8] hide-scrollbar">
             {messages.map((msg) => (
               <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[80%] p-4 rounded-3xl text-xs font-medium leading-relaxed ${
-                  msg.role === 'user' 
-                  ? 'bg-black text-white rounded-tr-none' 
-                  : 'bg-white border border-black/5 text-gray-800 rounded-tl-none shadow-sm'
-                }`}>
+                <div className={`max-w-[80%] p-4 rounded-3xl text-xs font-medium leading-relaxed ${msg.role === 'user'
+                    ? 'bg-black text-white rounded-tr-none'
+                    : 'bg-white border border-black/5 text-gray-800 rounded-tl-none shadow-sm'
+                  }`}>
                   {msg.text}
                 </div>
               </div>
@@ -108,15 +109,15 @@ export const ChatAssistant: React.FC = () => {
 
           <div className="p-6 bg-white border-t border-black/5">
             <div className="relative">
-              <input 
-                type="text" 
+              <input
+                type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="TYPE TRANSMISSION..."
                 className="w-full bg-[#f8f8f8] border-none rounded-2xl py-4 pl-5 pr-12 text-xs font-black uppercase tracking-widest focus:ring-2 focus:ring-black/5 transition-all outline-none placeholder:text-black/10"
               />
-              <button 
+              <button
                 onClick={handleSend}
                 disabled={!input.trim() || isLoading}
                 className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-black hover:text-[#e2ff4a] disabled:opacity-10 transition-colors"
@@ -131,7 +132,7 @@ export const ChatAssistant: React.FC = () => {
 
       {/* Toggle Button */}
       {!isOpen && (
-        <button 
+        <button
           onClick={() => setIsOpen(true)}
           className="bg-black hover:bg-black/90 text-white p-5 rounded-[2rem] shadow-2xl transition-all hover:scale-110 active:scale-95 group relative overflow-hidden"
         >

@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { ShoppingCart } from 'lucide-react';
@@ -19,7 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setView, cartCount: propCartCoun
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 pointer-events-none">
       <div className="flex-1"></div>
-      
+
       {/* Centered Logo */}
       <div className="flex-1 flex justify-center pointer-events-auto">
         <Link href="/" className="text-3xl font-black italic tracking-tighter text-black">

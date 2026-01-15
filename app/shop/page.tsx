@@ -1,15 +1,15 @@
 "use client";
 
 import React from 'react';
-import { Configurator } from '../../components/Configurator';
-import { BikeOutline } from '../../components/BikeOutline';
-import { Marquee } from '../../components/Marquee';
+import { Configurator } from '@/components/Configurator';
+import { BikeOutline } from '@/components/BikeOutline';
+import { Marquee } from '@/components/Marquee';
 import { ChevronRight, ShieldCheck, Zap, Activity, Cpu, Layers, Disc, Wind, ArrowRight, Twitter, Facebook, Share2 } from 'lucide-react';
-import { useCart } from '../../components/CartContext';
+import { useCart } from '@/components/CartContext';
 
 export default function ShopPage() {
   const { addToCart } = useCart();
-  
+
   const productData = {
     id: 101,
     name: 'BRAXX GT',
@@ -50,7 +50,7 @@ export default function ShopPage() {
               </div>
             </div>
             <div className="relative w-full aspect-square md:aspect-video flex items-center justify-center bg-white/40 rounded-[4rem] border border-white/60 shadow-xl overflow-hidden group">
-               <BikeOutline className="scale-125 transition-transform duration-1000 group-hover:scale-[1.3]" />
+              <BikeOutline className="scale-125 transition-transform duration-1000 group-hover:scale-[1.3]" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[

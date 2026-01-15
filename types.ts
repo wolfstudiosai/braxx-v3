@@ -38,3 +38,38 @@ export interface CartContextType {
   cartCount: number;
   total: number;
 }
+
+// API Product Types
+export interface ApiProductSpec {
+  key: string;
+  value: string;
+}
+
+export interface ApiSpecGroup {
+  group: string;
+  specs: ApiProductSpec[];
+}
+
+export interface ApiProductVariant {
+  id: string;
+  name: string;
+  images: string[];
+  inventory: number;
+  sellingPrice: number;
+  priceCurrency: string;
+}
+
+export interface ApiProduct {
+  uuid: string;
+  slug: string;
+  title: string;
+  description: string;
+  specifications: ApiSpecGroup[];
+  seo: {
+    title: string;
+    description: string;
+  };
+  collections: string[];
+  categories: string[];
+  variants: ApiProductVariant[];
+}
