@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { CartProvider } from '@/components/CartContext';
 import './globals.css';
+import { ToastContainer } from 'react-toastify';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -40,6 +41,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </svg>
             </div>
           </div>
+
+          <ToastContainer />
         </CartProvider>
       </body>
     </html>
