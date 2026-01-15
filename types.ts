@@ -9,7 +9,7 @@ export enum ViewState {
   CONTACT = 'CONTACT'
 }
 
-export interface Product {
+export interface CartProduct {
   id: number;
   name: string;
   price: number;
@@ -19,7 +19,7 @@ export interface Product {
   badge?: string;
 }
 
-export interface CartItem extends Product {
+export interface CartItem extends CartProduct {
   quantity: number;
 }
 
@@ -32,7 +32,7 @@ export interface ChatMessage {
 
 export interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: Product) => void;
+  addToCart: (product: CartProduct) => void;
   removeFromCart: (id: number) => void;
   updateQuantity: (id: number, delta: number) => void;
   cartCount: number;
@@ -40,17 +40,17 @@ export interface CartContextType {
 }
 
 // API Product Types
-export interface ApiProductSpec {
+export interface ProductSpec {
   key: string;
   value: string;
 }
 
-export interface ApiSpecGroup {
+export interface SpecGroup {
   group: string;
-  specs: ApiProductSpec[];
+  specs: ProductSpec[];
 }
 
-export interface ApiProductVariant {
+export interface ProductVariant {
   id: string;
   name: string;
   images: string[];
@@ -59,17 +59,17 @@ export interface ApiProductVariant {
   priceCurrency: string;
 }
 
-export interface ApiProduct {
+export interface Product {
   uuid: string;
   slug: string;
   title: string;
   description: string;
-  specifications: ApiSpecGroup[];
+  specifications: SpecGroup[];
   seo: {
     title: string;
     description: string;
   };
   collections: string[];
   categories: string[];
-  variants: ApiProductVariant[];
+  variants: ProductVariant[];
 }

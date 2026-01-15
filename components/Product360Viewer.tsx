@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef, useCallback, useEffect, useMemo } from 'react';
-import Image from 'next/image';
 
 interface Product360ViewerProps {
   images: string[];
@@ -133,7 +132,7 @@ export const Product360Viewer: React.FC<Product360ViewerProps> = ({ images, clas
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      style={{ cursor: 'url("/icons-360.png") 8 8, grab' }}
     >
       {/* Current visible image - show immediately */}
       <div className="relative flex justify-center items-center overflow-hidden h-[65vh] sm:h-[90vh]">

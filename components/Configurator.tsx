@@ -2,11 +2,11 @@
 
 import React, { useState, useMemo } from 'react';
 import { Calendar as CalendarIcon, ChevronRight, ArrowLeft, Plus } from 'lucide-react';
-import { ApiProduct } from '@/types';
+import { Product } from '@/types';
 
 interface ConfiguratorProps {
-  product: ApiProduct;
-  products: ApiProduct[];
+  product: Product;
+  products: Product[];
   selectedProductIndex: number;
   selectedVariantIndex: number;
   onProductChange: (index: number) => void;

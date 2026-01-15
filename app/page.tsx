@@ -1,7 +1,7 @@
 import { getProducts } from "@/lib/api";
 import { Suspense } from "react";
 import { HomePageContainer } from "@/components/HomePageContainer";
-import { ApiProduct } from "@/types";
+import { Product } from "@/types";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
 }
 
 const HomePageContent = async () => {
-  const products: ApiProduct[] = await getProducts();
+  const products: Product[] = await getProducts();
 
   return <HomePageContainer products={products} />;
 }

@@ -2,14 +2,14 @@
 "use client";
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { Product, CartItem, CartContextType } from '../types';
+import { CartProduct, CartItem, CartContextType } from '../types';
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
-  const addToCart = (product: Product) => {
+  const addToCart = (product: CartProduct) => {
     setCart(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {

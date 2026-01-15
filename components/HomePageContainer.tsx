@@ -10,10 +10,10 @@ import { ParallaxSection } from '@/components/ParallaxSection';
 import { BlogSection } from '@/components/BlogSection';
 import { useCart } from '@/components/CartContext';
 import Link from 'next/link';
-import { ApiProduct } from '@/types';
+import { Product } from '@/types';
 
 interface HomePageContainerProps {
-  products: ApiProduct[];
+  products: Product[];
 }
 
 export const HomePageContainer = ({ products }: HomePageContainerProps) => {
@@ -101,7 +101,7 @@ export const HomePageContainer = ({ products }: HomePageContainerProps) => {
         />
       </Link>
 
-      <ProductRow />
+      <ProductRow products={products} />
       <VideoSlideshow />
       <BlogSection />
     </>
