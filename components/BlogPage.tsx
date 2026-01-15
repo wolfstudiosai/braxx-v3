@@ -34,13 +34,13 @@ export const BlogPage: React.FC<BlogPageProps> = ({ setView }) => {
       {/* Featured Operative Intelligence */}
       <section className="px-8 lg:px-24 mb-10">
         <div className="group relative w-full h-[60vh] rounded-[4rem] overflow-hidden shadow-2xl bg-black">
-          <img 
-            src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=2000&auto=format&fit=crop" 
-            alt="Featured Post" 
+          <img
+            src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=2000&auto=format&fit=crop"
+            alt="Featured Post"
             className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-          
+
           <div className="absolute bottom-12 left-12 right-12 flex flex-col md:flex-row items-end justify-between gap-8">
             <div className="space-y-4 max-w-2xl">
               <div className="flex items-center gap-4">
@@ -56,7 +56,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ setView }) => {
                 How our latest drive-train optimization reduces acoustic signature by 40% without compromising peak torque. Field tested in dense urban environments.
               </p>
             </div>
-            
+
             <button className="bg-white text-black px-8 py-4 rounded-full font-black uppercase text-xs tracking-widest hover:bg-[#e2ff4a] transition-all flex items-center gap-2 group/btn">
               Read Report <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
             </button>
@@ -76,7 +76,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ setView }) => {
       </div>
 
       {/* Now passing setView down to allow navigation from the latest news sections */}
-      <BlogSection setView={setView} />
+      <BlogSection />
 
       <div className="h-32"></div>
     </div>
