@@ -10,7 +10,6 @@ import { ParallaxSection } from '@/components/ParallaxSection';
 import { BlogSection } from '@/components/BlogSection';
 import { StoreLocator } from '@/components/StoreLocator';
 import { useCart } from '@/components/CartContext';
-import Link from 'next/link';
 import { Product } from '@/types';
 
 interface HomePageContainerProps {
@@ -94,13 +93,11 @@ export const HomePageContainer = ({ products }: HomePageContainerProps) => {
 
       <Marquee className="border-t-0" />
 
-      <Link href="/shop" className="block group">
-        <ParallaxSection
-          title="UNRIVALED PERFORMANCE"
-          subtitle="(learn more)"
-          image="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=2000&auto=format&fit=crop"
-        />
-      </Link>
+      <ParallaxSection
+        title="UNRIVALED PERFORMANCE"
+        subtitle="(learn more)"
+        image="/images/UNRIVALED-PERFORMANCE.jpg"
+      />
 
       <ProductRow products={products} />
       <VideoSlideshow />
