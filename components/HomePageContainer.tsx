@@ -8,6 +8,7 @@ import { ProductRow } from '@/components/ProductRow';
 import { VideoSlideshow } from '@/components/VideoSlideshow';
 import { ParallaxSection } from '@/components/ParallaxSection';
 import { BlogSection } from '@/components/BlogSection';
+import { StoreLocator } from '@/components/StoreLocator';
 import { useCart } from '@/components/CartContext';
 import Link from 'next/link';
 import { Product } from '@/types';
@@ -103,6 +104,7 @@ export const HomePageContainer = ({ products }: HomePageContainerProps) => {
 
       <ProductRow products={products} />
       <VideoSlideshow />
+      <StoreLocator />
       <BlogSection />
     </>
   );
