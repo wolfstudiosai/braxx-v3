@@ -88,15 +88,13 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
           <div className="flex flex-col items-end gap-8">
             <div className="flex gap-12 text-[10px] font-black tracking-[0.3em] uppercase text-white/60">
               <Link
-                href="/"
-                onClick={(e) => { if (setView) { e.preventDefault(); handleNav(ViewState.HOME); } }}
+                href="/about"
                 className="hover:text-[#e2ff4a] transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/blog"
-                onClick={(e) => { if (setView) { e.preventDefault(); handleNav(ViewState.BLOG); } }}
                 className="hover:text-[#e2ff4a] transition-colors"
               >
                 Blog

@@ -13,7 +13,7 @@ interface BlogPost {
   image: string;
 }
 
-const BLOG_POSTS: BlogPost[] = [
+export const BLOG_POSTS: BlogPost[] = [
   {
     id: 1,
     category: 'Photographs',

@@ -102,7 +102,7 @@ export const HomePageContainer = ({ products }: HomePageContainerProps) => {
       <ProductRow products={products} />
       <VideoSlideshow />
       <StoreLocator />
-      <BlogSection />
+      {/* <BlogSection /> */}
     </>
   );
 }

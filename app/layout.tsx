@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main>{children}</main>
             <Footer />
-            <ChatAssistant />
+            {/* <ChatAssistant /> */}
 
             {/* Global Aesthetic Noise Layer */}
             <div className="fixed inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay z-9999">
