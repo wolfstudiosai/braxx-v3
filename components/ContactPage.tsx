@@ -6,7 +6,7 @@ import { Send, MapPin, Phone, Mail } from 'lucide-react';
 export const ContactPage: React.FC = () => {
   return (
     <div className="bg-[#d4d4d4] min-h-screen flex flex-col lg:flex-row pt-20">
-      {/* LEFT PANEL: STYLIZED INTERACTIVE MAP */}
+      {/* LEFT PANEL: STYLIZED MAP */}
       <div className="w-full lg:w-1/2 h-[50vh] lg:h-auto relative overflow-hidden bg-black group">
         <iframe
           title="Tactical Outpost Location"
