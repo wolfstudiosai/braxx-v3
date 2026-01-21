@@ -23,12 +23,12 @@ export const AboutPage: React.FC = () => {
         </video>
         <div className="absolute inset-0 bg-linear-gradient-to-b from-black/40 via-transparent to-[#d4d4d4]"></div>
 
-        <div className="relative z-10 h-full flex flex-col justify-start px-8 lg:px-24 pt-32 lg:pt-40">
-          <div className="flex items-center gap-4 mb-6">
-            <span className="w-12 h-[2px] bg-[#e2ff4a]"></span>
-            <span className="text-[#e2ff4a] text-[10px] font-black tracking-[0.6em] uppercase">R&D Facility // L.A.</span>
+        <div className="relative z-10 h-full flex flex-col justify-start px-4 sm:px-8 lg:px-24 pt-24 sm:pt-32 lg:pt-40">
+          <div className="flex items-center gap-2 sm:gap-4 mb-4 sm:mb-6">
+            <span className="w-8 sm:w-12 h-[2px] bg-[#e2ff4a]"></span>
+            <span className="text-[#e2ff4a] text-[9px] sm:text-[10px] font-black tracking-[0.4em] sm:tracking-[0.6em] uppercase">R&D Facility // L.A.</span>
           </div>
-          <h1 className="text-white text-5xl lg:text-[8rem] font-light italic tracking-tighter uppercase leading-none whitespace-nowrap">
+          <h1 className="text-white text-3xl sm:text-5xl lg:text-[8rem] font-light italic tracking-tighter uppercase leading-none">
             ENGINEERING STUDIO
           </h1>
         </div>
@@ -149,17 +149,17 @@ export const AboutPage: React.FC = () => {
         </section>
 
         {/* FINAL BRIEFING */}
-        <section className="bg-black text-white p-16 lg:p-32 mb-32 relative overflow-hidden">
+        <section className="bg-black text-white p-6 sm:p-12 lg:p-32 mb-32 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-[#e2ff4a] opacity-5 -skew-x-12 translate-x-1/2"></div>
-          <div className="max-w-2xl relative z-10 space-y-10">
-            <span className="text-[#e2ff4a] text-[10px] font-black uppercase tracking-[0.5em]">Final Operational Brief</span>
-            <h2 className="text-6xl md:text-8xl font-light italic tracking-tighter uppercase leading-[0.9]">
+          <div className="max-w-2xl relative z-10 space-y-6 sm:space-y-10">
+            <span className="text-[#e2ff4a] text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.5em]">Final Operational Brief</span>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-light italic tracking-tighter uppercase leading-[0.9]">
               Innovation <br /> is not <br /> <span className="text-transparent" style={{ WebkitTextStroke: '1px white' }}>Optional.</span>
             </h2>
             <p className="text-lg font-medium opacity-40 leading-snug">
               Every component within the Studio is field-tested for resilience. We don&apos;t just build bikes; we build systems of urban dominance.
             </p>
-            <div className="flex items-center gap-12 pt-6">
+            <div className="flex flex-wrap items-center gap-6 sm:gap-12 pt-4 sm:pt-6">
               <div>
                 <span className="block text-[8px] font-black opacity-30 uppercase mb-2">Build Rate</span>
                 <span className="text-xl font-black italic">4.2 Units/Mo</span>

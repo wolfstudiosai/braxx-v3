@@ -29,13 +29,13 @@ export const ContactPage: React.FC = () => {
       </div>
 
       {/* RIGHT PANEL: TEXT INFO & CONTACT FORM */}
-      <div className="w-full lg:w-1/2 h-auto flex flex-col p-8 lg:p-24 justify-center bg-[#d4d4d4]">
-        <div className="max-w-xl mx-auto w-full space-y-16">
+      <div className="w-full lg:w-1/2 h-auto flex flex-col p-4 sm:p-8 lg:p-24 justify-center bg-[#d4d4d4]">
+        <div className="max-w-xl mx-auto w-full space-y-8 sm:space-y-16">
 
           {/* Header */}
-          <div className="space-y-6">
-            <span className="text-black/30 text-[10px] font-black uppercase tracking-[0.5em] block">Direct Communications</span>
-            <h1 className="text-6xl lg:text-[8rem] font-light italic tracking-tighter uppercase leading-none text-black whitespace-nowrap">
+          <div className="space-y-4 sm:space-y-6">
+            <span className="text-black/30 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.5em] block">Direct Communications</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-[6rem] xl:text-[8rem] font-light italic tracking-tighter uppercase leading-none text-black">
               SECURE CHANNEL
             </h1>
             <div className="pt-6">

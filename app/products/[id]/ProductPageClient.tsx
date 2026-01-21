@@ -149,11 +149,11 @@ export function ProductPageClient({ product, initialVariantIndex }: ProductPageC
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#d4d4d4]"></div>
 
-        <div className="relative z-10 h-full flex flex-col justify-start px-8 lg:px-24 pt-32 lg:pt-40">
-          <span className="text-[#e2ff4a] text-[10px] font-black tracking-[0.6em] uppercase mb-4 animate-in fade-in slide-in-from-top-4 duration-700">
+        <div className="relative z-10 h-full flex flex-col justify-start px-4 sm:px-8 lg:px-24 pt-24 sm:pt-32 lg:pt-40">
+          <span className="text-[#e2ff4a] text-[9px] sm:text-[10px] font-black tracking-[0.4em] sm:tracking-[0.6em] uppercase mb-4 animate-in fade-in slide-in-from-top-4 duration-700">
             {product.categories[0] || 'Operational Prototype'}
           </span>
-          <h1 className="text-white text-5xl lg:text-[10rem] font-light italic tracking-tighter uppercase leading-none animate-in fade-in slide-in-from-left-8 duration-1000 whitespace-nowrap">
+          <h1 className="text-white text-3xl sm:text-5xl lg:text-[10rem] font-light italic tracking-tighter uppercase leading-none animate-in fade-in slide-in-from-left-8 duration-1000">
             {product.title}
           </h1>
         </div>
@@ -166,8 +166,8 @@ export function ProductPageClient({ product, initialVariantIndex }: ProductPageC
       />
 
       {/* TOP SECTION: MAIN CONFIGURATOR */}
-      <div className="max-w-[1600px] mx-auto px-8 lg:px-24 py-32">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-24 py-12 sm:py-20 lg:py-32">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
 
           {/* Main Visuals Area */}
           <div className="flex-1 space-y-12">
@@ -493,10 +493,10 @@ export function ProductPageClient({ product, initialVariantIndex }: ProductPageC
       </section>
 
       {/* SECTION 4: SPLIT CINEMATIC TUTORIALS */}
-      <section className="relative h-screen flex flex-col lg:flex-row bg-black overflow-hidden">
+      <section className="relative min-h-screen lg:h-screen flex flex-col lg:flex-row bg-black overflow-hidden">
 
         {/* LEFT: VERTICAL VIDEO SELECTOR */}
-        <div className="w-full lg:w-[400px] h-[40vh] lg:h-full flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 overflow-y-auto hide-scrollbar z-20 bg-black shrink-0">
+        <div className="w-full lg:w-[350px] xl:w-[400px] h-auto lg:h-full flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 overflow-y-auto hide-scrollbar z-20 bg-black shrink-0">
           <div className="p-8 border-b border-white/10 sticky top-0 bg-black/90 backdrop-blur-sm z-30">
             <span className="text-[#e2ff4a] text-[10px] font-black tracking-[0.4em] uppercase block">Training Modules</span>
           </div>
@@ -532,7 +532,7 @@ export function ProductPageClient({ product, initialVariantIndex }: ProductPageC
         </div>
 
         {/* RIGHT: MAIN PLAYER STAGE */}
-        <div className="flex-1 relative h-full bg-black flex items-center justify-center overflow-hidden">
+        <div className="flex-1 relative min-h-[50vh] lg:min-h-0 h-full bg-black flex items-center justify-center overflow-hidden">
           <div key={activeTutorial} className="absolute inset-0 z-0 animate-in fade-in duration-1000">
             <img
               src={tutorials[activeTutorial].src}
@@ -542,11 +542,11 @@ export function ProductPageClient({ product, initialVariantIndex }: ProductPageC
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80"></div>
           </div>
 
-          <div className="relative z-10 text-center space-y-8 px-12 max-w-4xl mx-auto animate-in slide-in-from-bottom-8 duration-700">
-            <span className="text-[#e2ff4a] text-[12px] font-black tracking-[0.8em] uppercase block">
+          <div className="relative z-10 text-center space-y-4 sm:space-y-8 px-4 sm:px-12 max-w-4xl mx-auto animate-in slide-in-from-bottom-8 duration-700">
+            <span className="text-[#e2ff4a] text-[10px] sm:text-[12px] font-black tracking-[0.4em] sm:tracking-[0.8em] uppercase block">
               {tutorials[activeTutorial].sub}
             </span>
-            <h2 className="text-white text-5xl md:text-8xl lg:text-[7rem] font-black italic tracking-tighter uppercase leading-[0.9] mb-8">
+            <h2 className="text-white text-3xl sm:text-5xl md:text-7xl lg:text-[7rem] font-black italic tracking-tighter uppercase leading-[0.9] mb-4 sm:mb-8">
               {tutorials[activeTutorial].title}
             </h2>
             <p className="text-white/60 font-bold uppercase tracking-widest text-xs max-w-md mx-auto">
